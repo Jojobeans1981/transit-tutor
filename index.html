@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYC DOT Dispatcher Ace | S.O.D.A. Academy</title>
+    <title>S.O.D.A. | Surface Operations Digital Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -24,7 +24,7 @@
         height: 800px;
         pointer-events: none;
         z-index: 0;
-        opacity: 0.15;
+        opacity: 0.1;
       }
 
       .radar-beam {
@@ -35,19 +35,22 @@
         animation: radar-spin 10s linear infinite;
       }
 
-      .watermark-logo {
-        position: absolute;
-        inset: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0.4;
-        filter: grayscale(1) brightness(2);
+      .app-watermark {
+        position: fixed;
+        bottom: -10%;
+        right: -10%;
+        width: 800px;
+        height: 800px;
+        opacity: 0.12;
+        filter: grayscale(1) brightness(1.5);
+        pointer-events: none;
+        z-index: -1;
+        transform: rotate(-15deg);
       }
 
       .glass-blur {
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
       }
 
       ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -55,11 +58,26 @@
       ::-webkit-scrollbar-thumb { background: #0039A6; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #FF6319; }
     </style>
-
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.90.1",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
 </head>
 <body class="bg-black text-slate-900">
     <div id="root"></div>
-    <!-- Vite handles the module resolution for index.tsx automatically -->
+    <div class="app-watermark">
+      <img src="logo.png" alt="" class="w-full h-full object-contain" />
+    </div>
     <script type="module" src="index.tsx"></script>
 </body>
 </html>

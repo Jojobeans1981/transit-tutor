@@ -1,8 +1,7 @@
-
 {
-  "name": "Transit Tutor: S.O.D.A. Academy",
-  "short_name": "TransitTutor",
-  "description": "Professional Grade Surface Operations Dispatcher Academy (S.O.D.A.) Study Suite for NYC Transit & DOT personnel.",
+  "name": "S.O.D.A. Surface Operations Digital Academy",
+  "short_name": "S.O.D.A.",
+  "description": "Professional Grade Surface Operations Digital Academy (S.O.D.A.) Study Suite for NYC Transit & DOT personnel.",
   "icons": [
     {
       "src": "https://img.icons8.com/color/512/metro.png",
@@ -14,7 +13,5 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "requestFramePermissions": []
 }
